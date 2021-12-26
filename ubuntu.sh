@@ -20,7 +20,7 @@ sudo apt install ubuntu-restricted-extras libavcodec-extra
 sudo apt -y install build-essential
 #IDEs + programs
 sudo snap install telegram-desktop
-sudo snap install pycharm-professional --classic
+sudo snap install goland --classic
 sudo snap install code --classic
 sudo snap install libreoffice
 sudo snap install foliate
