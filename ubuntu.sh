@@ -4,12 +4,15 @@ echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select tr
 sudo apt-get install ttf-mscorefonts-installer
 #Update
 sudo apt update && sudo apt full-upgrade
-#python
+#python and golang
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt update
 sudo apt install python3.10
 sudo apt install python3-pip
 pip install virtualenv
+git clone https://github.com/udhos/update-golang
+cd update-golang
+sudo ./update-golang.sh
 #sudo apt install python3.10-venv
 #Snap
 sudo apt install snapd
