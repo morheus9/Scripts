@@ -13,7 +13,6 @@ pip install virtualenv
 git clone https://github.com/udhos/update-golang
 cd update-golang
 sudo ./update-golang.sh
-#sudo apt install python3.10-venv
 #Snap
 sudo apt install snapd
 sudo ln -s /var/lib/snapd/snap /snap
