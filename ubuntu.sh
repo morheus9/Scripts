@@ -21,6 +21,8 @@ sudo snap install snap-store
 sudo apt install ubuntu-restricted-extras libavcodec-extra
 sudo apt -y install build-essential
 #Apps
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+sudo apt install ./google-chrome-stable_current_amd64.deb
 sudo snap install code --classic
 sudo snap install libreoffice
 sudo snap install foliate
