@@ -38,10 +38,11 @@ echo "deb [arch=amd64] http://download.virtualbox.org/virtualbox/debian bullseye
 sudo apt update
 sudo apt install virtualbox-6.1
 wget https://download.virtualbox.org/virtualbox/6.1.26/Oracle_VM_VirtualBox_Extension_Pack-6.1.26.vbox-extpack
-sudo VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-6.1.26.vbox-extpack
-
-
+sudo VBoxManage extpack install Oracle_VM_VirtualBox_Extension_Pack-6.1.26.vbox-extpack     
 
 python3.10 --version
 
-#      https://desktop.telegram.org/
+#################################################################################################
+
+#     https://desktop.telegram.org/
+#     Отключить ускорение в chrome
