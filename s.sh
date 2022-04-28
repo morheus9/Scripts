@@ -77,6 +77,11 @@ docker ps
 ## Comment line with swap 0 1
 ###########################################################
 
+kubeadm init --pod-network-cidr=10.244.0.0/16
+kubectl get nodes
+
+
+
 ##     PORTS
 ##-----masternode-----
 ##     iptables -I INPUT 1 -p tcp --match multiport --dports 6443,2379:2380,10250:10252 -j ACCEPT
