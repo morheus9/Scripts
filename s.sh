@@ -77,8 +77,8 @@ docker ps
 ## Comment line with swap 0 1
 ###########################################################
 
-kubeadm init --pod-network-cidr=10.244.0.0/16
-kubectl get nodes
+##     sudo kubeadm init --pod-network-cidr=10.244.0.0/16
+##     sudo kubectl get nodes
 
 
 
