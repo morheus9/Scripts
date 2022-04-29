@@ -43,7 +43,7 @@ cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
 net.bridge.bridge-nf-call-ip6tables = 1
 net.bridge.bridge-nf-call-iptables = 1
 EOF
-#modules
+#     Modules
 cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
 br_netfilter
 overlay
@@ -56,8 +56,8 @@ sudo sh -c "echo 'export KUBECONFIG=/etc/kubernetes/admin.conf' >> /etc/environm
 modprobe br_netfilter
 modprobe overlay
 swapoff -a
-kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
-
+#     Flannel
+kubectl apply -f https://raw.githubusercontent.com/flannel-io/flannel/master/Documentation/kube-flannel.yml
 
 kubectl version --client
 docker-compose --version
