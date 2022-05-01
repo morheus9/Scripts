@@ -12,7 +12,7 @@ cd Python-3.10.*/
 make -j 4
 make altinstall
 apt install python3-pip
--H pip install -U pipenv
+sudo -H pip install -U pipenv
 #     Vscode
 apt-get install wget gpg
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
