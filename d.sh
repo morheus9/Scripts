@@ -10,8 +10,9 @@ tar -xf Python-3.10.*.tgz
 cd Python-3.10.*/
 ./configure --enable-optimizations
 make -j 4
-sudo make altinstall
-sudo apt install python3-pip
+make altinstall
+apt install python3-pip
+sudo -H pip install -U pipenv
 #     Vscode
 sudo apt-get install wget gpg
 wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
