@@ -17,10 +17,6 @@ apt update
 apt install python3.10
 apt install python3-pip
 pip install virtualenv
-#     Snap
-apt install snapd
-ln -s /var/lib/snapd/snap /snap
-snap install snap-store
 #     Gcc + nettools
 apt install ubuntu-restricted-extras libavcodec-extra
 apt -y install build-essential
@@ -33,9 +29,7 @@ snap install libreoffice
 snap install foliate
 #     Git
 apt install git
-#     Virtualbox
-apt update
-apt install virtualbox virtualbox-ext-pack
+
 
 
 #########################################################################################
