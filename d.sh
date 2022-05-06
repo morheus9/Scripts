@@ -11,6 +11,7 @@ cd Python-3.10.*/
 ./configure --enable-optimizations
 make -j 4
 make altinstall
+sudo apt install python3-pip
 sudo -H pip install -U pipenv
 pipenv --python 3.10
 #     Vscode
