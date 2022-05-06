@@ -30,11 +30,24 @@ EOF
 wget -O- https://dl.google.com/linux/linux_signing_key.pub |gpg --dearmor > /etc/apt/trusted.gpg.d/google.gpg
 apt update
 apt install google-chrome-stable
+#     KVM+virtualm_achine_manager
+apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon
+sudo apt install virt-manager -y
+sudo virsh net-start default
+sudo virsh net-autostart default
+sudo modprobe vhost_net
 
 
 python3.10 --version
 
 #################################################################################################
+
+
+#     rm -r update-golang
+#     git clone https://github.com/udhos/update-golang
+#     cd update-golang
+#     bash ./update-golang.sh
+#     apt install git
 
 #     https://desktop.telegram.org/
 #     Отключить ускорение в chrome
