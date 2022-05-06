@@ -12,7 +12,6 @@ cd Python-3.10.*/
 make -j 4
 make altinstall
 sudo apt install python3-pip
-sudo -H pip install -U pipenv
 pipenv --python 3.10
 #     Vscode
 apt-get install wget gpg
@@ -41,13 +40,12 @@ sudo modprobe vhost_net
 python3.10 --version
 
 #################################################################################################
-
+#     sudo -H pip install -U pipenv
 
 #     rm -r update-golang
 #     git clone https://github.com/udhos/update-golang
 #     cd update-golang
 #     bash ./update-golang.sh
 #     apt install git
-
 #     https://desktop.telegram.org/
 #     Отключить ускорение в chrome
