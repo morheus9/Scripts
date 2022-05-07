@@ -36,8 +36,20 @@ sudo virsh net-start default
 sudo virsh net-autostart default
 sudo modprobe vhost_net
 
-
 python3.10 --version
+
+######### setup of libvirt #########
+
+#sudo nano /etc/libvirt/qemu.conf ------And rename:
+# user = "USERNAME" <----------------
+# The group for QEMU processes run by the system instance. It can be
+# specified in a similar way to user.
+# group = "libvirt" <----------------
+
+
+#### sudo systemctl restart libvirtd
+#### sudo usermod -a -G libvirt $(whoami)
+
 
 #################################################################################################
 #     sudo -H pip install -U pipenv
