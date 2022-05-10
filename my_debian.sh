@@ -38,28 +38,16 @@ wget -O- https://dl.google.com/linux/linux_signing_key.pub |gpg --dearmor > /etc
 apt update
 apt install google-chrome-stable
 
-# ---------------------------------------------------KVM+virtualm_achine_manager
+# ---------------------------------------------------KVM + virtual_machine_manager
 apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon
 sudo apt install virt-manager -y
 sudo virsh net-start default
 sudo virsh net-autostart default
 sudo modprobe vhost_net
 
-#---------------------------------------------------fix network
+#---------------------------------------------------Fix_network
 sudo systemctl restart libvirtd
 sudo usermod -a -G libvirt $(whoami)
-
-python3 --version
-
-######### setup of libvirt ######################################################################
-#  sudo nano /etc/libvirt/qemu.conf ------And rename:
-#     user = "USERNAME" <----------------
-#     The group for QEMU processes run by the system instance. It can be
-#     specified in a similar way to user.
-#     group = "libvirt" <----------------
-
-#     https://desktop.telegram.org/
-#     please off hardware acceleration in chrome
 
 #---------------------------------------------------Nvidia_Drivers
 sudo apt-add-repository contrib
@@ -67,9 +55,23 @@ sudo apt-add-repository non-free
 sudo apt update
 sudo apt install nvidia-driver
 
-################################################################################################# 
+python3 --version
 
-######### install golang #########
+
+######### setup_of_libvirt #############################################################################
+#  sudo nano /etc/libvirt/qemu.conf ------And rename:
+#     user = "USERNAME" <----------------
+#     The group for QEMU processes run by the system instance. It can be
+#     specified in a similar way to user.
+#     group = "libvirt" <----------------
+
+######### telegram + chrome_setup ######################################################################
+#     https://desktop.telegram.org/
+#     please off hardware acceleration in chrome
+
+######################################################################################################## 
+
+######### install_golang ###############################################################################
 #     rm -r update-golang
 #     git clone https://github.com/udhos/update-golang
 #     cd update-golang
