@@ -65,16 +65,17 @@ python3 --version
 #     specified in a similar way to user.
 #     group = "libvirt" <----------------
 
-######### telegram + chrome_setup ######################################################################
+######### Telegram + chrome_setup ######################################################################
 #     https://desktop.telegram.org/
 #     please off hardware acceleration in chrome
 
 ######################################################################################################## 
 
-######### install_golang ###############################################################################
+######### Install_golang ###############################################################################
 #     rm -r update-golang
 #     git clone https://github.com/udhos/update-golang
 #     cd update-golang
 #     bash ./update-golang.sh
+######### Install_git ###################################################################################
 #     apt install git
 
