@@ -61,6 +61,12 @@ python3 --version
 #     https://desktop.telegram.org/
 #     please off hardware acceleration in chrome
 
+#---------------------------------------------------Nvidia_Drivers
+sudo apt-add-repository contrib
+sudo apt-add-repository non-free
+sudo apt update
+sudo apt install nvidia-driver
+
 ################################################################################################# 
 
 ######### install golang #########
