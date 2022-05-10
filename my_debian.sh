@@ -67,7 +67,7 @@ python3 --version
 #     group = "libvirt" <----------------
 
 ######### Telegram + chrome_setup ######################################################################
-#     https://web.telegram.org/z
+#     https://web.telegram.org
 #     please off hardware acceleration in chrome
 
 ######################################################################################################## 
