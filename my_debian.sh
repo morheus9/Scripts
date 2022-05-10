@@ -19,6 +19,7 @@ pipenv --python 3.10
 cat <<EOF | sudo tee ~/.bashrc
 alias python='/usr/local/bin/python3.10'
 EOF
+source ~/.bashrc
 
 #---------------------------------------------------Vscode
 apt-get install wget gpg
