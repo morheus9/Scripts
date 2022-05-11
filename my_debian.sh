@@ -4,7 +4,6 @@
 apt update && apt full-upgrade
 
 #---------------------------------------------------Python
-apt update && sudo apt upgrade
 apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev
 wget https://www.python.org/ftp/python/3.10.4/Python-3.10.4.tgz
 tar -xf Python-3.10.*.tgz
