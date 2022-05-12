@@ -28,7 +28,7 @@ apt update
 apt install nvidia-driver
 
 #---------------------------------------------------Add_user
-sudo adduser pi
+adduser pi
 usermod -aG sudo pi
 
 ######### Telegram + chrome_setup ######################################################################
