@@ -27,6 +27,10 @@ apt-add-repository non-free
 apt update
 apt install nvidia-driver
 
+#---------------------------------------------------Add_user
+sudo adduser pi
+usermod -aG sudo pi
+
 ######### Telegram + chrome_setup ######################################################################
 #     https://web.telegram.org
 #     please off hardware acceleration in chrome
