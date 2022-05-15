@@ -14,11 +14,23 @@ make altinstall
 sudo apt install python3-pip
 sudo -H pip install -U pipenv
 pipenv --python 3.10
-
 cat <<EOF | sudo tee ~/.bashrc
 alias python='/usr/local/bin/python3.10'
 EOF
 source ~/.bashrc
+
+#--------------------------------------------------Golang
+rm -r update-golang
+git clone https://github.com/udhos/update-golang
+cd update-golang
+bash ./update-golang.sh
+
+#--------------------------------------------------Node
+curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
+apt-get install -y nodejs
+
+#---------------------------------------------------Git
+apt install git
 
 #---------------------------------------------------Vscode
 apt-get install wget gpg
@@ -38,26 +50,10 @@ wget -O- https://dl.google.com/linux/linux_signing_key.pub |gpg --dearmor > /etc
 apt update
 apt install google-chrome-stable
 
-#----------------------------------------------------KVM + virtual_machine_manager
-apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon
-sudo apt install virt-manager -y
-sudo virsh net-start default
-sudo virsh net-autostart default
-sudo modprobe vhost_net
-
-#----------------------------------------------------Fix_network
-sudo systemctl restart libvirtd
-sudo usermod -a -G libvirt $(whoami)
-
 python3 --version
+node -v
 
 
-######### setup_of_libvirt #############################################################################
-#  sudo nano /etc/libvirt/qemu.conf ------And rename:
-#     user = "USERNAME" <----------------
-#     The group for QEMU processes run by the system instance. It can be
-#     specified in a similar way to user.
-#     group = "libvirt" <----------------
 
 ######### Telegram + chrome_setup ######################################################################
 #     https://web.telegram.org
@@ -65,11 +61,19 @@ python3 --version
 
 ######################################################################################################## 
 
-######### Install_golang ###############################################################################
-#     rm -r update-golang
-#     git clone https://github.com/udhos/update-golang
-#     cd update-golang
-#     bash ./update-golang.sh
-######### Install_git ###################################################################################
-#     apt install git
+#----------------------------------------------------KVM + virtual_machine_manager
+# apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon
+# sudo apt install virt-manager -y
+# sudo virsh net-start default
+# sudo virsh net-autostart default
+# sudo modprobe vhost_net
+#----------------------------------------------------Fix_network
+# sudo systemctl restart libvirtd
+# sudo usermod -a -G libvirt $(whoami)
 
+######### setup_of_libvirt #############################################################################
+#  sudo nano /etc/libvirt/qemu.conf ------And rename:
+#     user = "USERNAME" <----------------
+#     The group for QEMU processes run by the system instance. It can be
+#     specified in a similar way to user.
+#     group = "libvirt" <----------------
