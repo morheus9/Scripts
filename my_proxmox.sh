@@ -21,42 +21,13 @@ wget -O- https://dl.google.com/linux/linux_signing_key.pub |gpg --dearmor > /etc
 apt update
 apt install google-chrome-stable
 
-#---------------------------------------------------Nvidia_Drivers
-apt-add-repository contrib
-apt-add-repository non-free
-apt update
-apt install nvidia-driver
-
 #---------------------------------------------------Add_user
 #     adduser pi
 #     usermod -aG sudo pi
 
+
+
 ######### Telegram + chrome_setup ######################################################################
 #     https://web.telegram.org
 #     please off hardware acceleration in chrome
-########################################################################################################
-
-######### Install_golang ###############################################################################
-#     rm -r update-golang
-#     git clone https://github.com/udhos/update-golang
-#     cd update-golang
-#     bash ./update-golang.sh
-########################################################################################################
-
-######## Install_Python ################################################################################
-#     apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev
-#     wget https://www.python.org/ftp/python/3.10.4/Python-3.10.4.tgz
-#     tar -xf Python-3.10.*.tgz
-#     cd Python-3.10.*/
-#     ./configure --enable-optimizations
-#     make -j 4
-#     make altinstall
-#     apt install python3-pip
-#     pip install -U pipenv
-#     pipenv --python 3.10
-#
-#     cat <<EOF | sudo tee ~/.bashrc
-#     alias python='/usr/local/bin/python3.10'
-#     EOF
-#     source ~/.bashrc
 ########################################################################################################
