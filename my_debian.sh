@@ -1,9 +1,9 @@
 #!/bin/bash
 
-#---------------------------------------------------Update
+#--------------------------------------------------Update
 apt update && apt full-upgrade
 
-#---------------------------------------------------Python
+#--------------------------------------------------Python
 apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev wget libbz2-dev
 wget https://www.python.org/ftp/python/3.10.4/Python-3.10.4.tgz
 tar -xf Python-3.10.*.tgz
@@ -38,22 +38,16 @@ wget -O- https://dl.google.com/linux/linux_signing_key.pub |gpg --dearmor > /etc
 apt update
 apt install google-chrome-stable
 
-# ---------------------------------------------------KVM + virtual_machine_manager
+#----------------------------------------------------KVM + virtual_machine_manager
 apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon
 sudo apt install virt-manager -y
 sudo virsh net-start default
 sudo virsh net-autostart default
 sudo modprobe vhost_net
 
-#---------------------------------------------------Fix_network
+#----------------------------------------------------Fix_network
 sudo systemctl restart libvirtd
 sudo usermod -a -G libvirt $(whoami)
-
-#---------------------------------------------------Nvidia_Drivers
-sudo apt-add-repository contrib
-sudo apt-add-repository non-free
-sudo apt update
-sudo apt install nvidia-driver
 
 python3 --version
 
