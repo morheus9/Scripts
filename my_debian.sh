@@ -47,7 +47,7 @@ apt update
 apt install google-chrome-stable
 
 python3 --version
-node -v
+go version
 
 ######### Telegram + chrome_setup ######################################################################
 #     https://web.telegram.org
