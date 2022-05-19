@@ -19,15 +19,11 @@ alias python='/usr/local/bin/python3.10'
 EOF
 source ~/.bashrc
 
-#--------------------------------------------------Golang
+#-----------------------------------------------Golang
 rm -r update-golang
 git clone https://github.com/udhos/update-golang
 cd update-golang
 bash ./update-golang.sh
-
-#--------------------------------------------------Node
-curl -fsSL https://deb.nodesource.com/setup_18.x | bash -
-apt-get install -y nodejs
 
 #---------------------------------------------------Git
 apt install git
@@ -53,14 +49,15 @@ apt install google-chrome-stable
 python3 --version
 node -v
 
-
-
 ######### Telegram + chrome_setup ######################################################################
 #     https://web.telegram.org
 #     please off hardware acceleration in chrome
 
-######################################################################################################## 
 
+
+
+
+######################################################################################################## 
 #----------------------------------------------------KVM + virtual_machine_manager
 # apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon
 # sudo apt install virt-manager -y
