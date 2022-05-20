@@ -20,6 +20,7 @@ EOF
 source ~/.bashrc
 
 #-----------------------------------------------Golang
+apt-get install build-essential
 rm -r update-golang
 git clone https://github.com/udhos/update-golang
 cd update-golang
