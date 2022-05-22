@@ -47,8 +47,15 @@ wget -O- https://dl.google.com/linux/linux_signing_key.pub |gpg --dearmor > /etc
 apt update
 apt install google-chrome-stable
 
+#---------------------------------------------------Docker
+apt install docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo usermod -aG docker ${USER}
+
 python3 --version
 go version
+docker ps
 
 ######### Telegram + chrome_setup ######################################################################
 #     https://web.telegram.org
