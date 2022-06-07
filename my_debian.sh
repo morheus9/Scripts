@@ -19,13 +19,6 @@ alias python='/usr/local/bin/python3.10'
 EOF
 source ~/.bashrc
 
-#-----------------------------------------------Golang
-apt-get install build-essential
-rm -r update-golang
-git clone https://github.com/udhos/update-golang
-cd update-golang
-bash ./update-golang.sh
-
 #---------------------------------------------------Git
 apt install git
 
