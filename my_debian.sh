@@ -19,6 +19,15 @@ alias python='/usr/local/bin/python3.10'
 EOF
 source ~/.bashrc
 
+#---------------------------------------------------Node
+sudo apt install curl
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+nvm install node
+sudo apt install curl -y
+curl -sL https://deb.nodesource.com/setup_18.x | sudo bash -
+sudo apt install nodejs -y
+sudo apt install npm -y
+
 #---------------------------------------------------Git
 apt install git
 
