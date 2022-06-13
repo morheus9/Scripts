@@ -19,6 +19,9 @@ alias python='/usr/local/bin/python3.10'
 EOF
 source ~/.bashrc
 
+#---------------------------------------------------Scala
+curl -fL https://github.com/coursier/launchers/raw/master/cs-x86_64-pc-linux.gz | gzip -d > cs && chmod +x cs && ./cs setup
+
 #---------------------------------------------------Git
 apt install git
 
