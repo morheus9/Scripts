@@ -25,8 +25,7 @@ git clone https://github.com/udhos/update-golang
 cd update-golang
 bash ./update-golang.sh
 
-#---------------------------------------------------Gcc + nettools
-apt install ubuntu-restricted-extras libavcodec-extra
+#---------------------------------------------------Gcc
 apt -y install build-essential
 
 #---------------------------------------------------Git
